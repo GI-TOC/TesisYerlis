@@ -137,20 +137,20 @@ clie=clie.astype(int)
 cost=Costos(sec,N,Tp,clie,dem)
 cost=cost.astype(int)
 #Torneo
-#for i in range(Ngen):
-padres=torneo(Tp,N,matriz,clie,dem)
+for i in range(Ngen):
+    padres=torneo(Tp,N,matriz,clie,dem)
 #Cruzamiento
-hijos=cruzamiento(Tp,N,padres)
+    hijos=cruzamiento(Tp,N,padres)
 #Mutacion
-hijosmutados=mutacion(Tp,N)
+    hijosmutados=mutacion(Tp,N)
 #Evaluacionhijosmutados
-secu=secuencias(Tp,N,hijosmutados)
-secu=secu.astype(int)
-clien=Eval(Tp,N,dem,cap,secu,PI)
-clien=clien.astype(int)
-costu=Costos(secu,N,Tp,clien,dem)
-costu=costu.astype(int)
-costo=costu
+    secu=secuencias(Tp,N,hijosmutados)
+    secu=secu.astype(int)
+    clien=Eval(Tp,N,dem,cap,secu,PI)
+    clien=clien.astype(int)
+    costu=Costos(secu,N,Tp,clien,dem)
+    costu=costu.astype(int)
+    costo=costu
 #MejorValor
 menorvalor,mejorsecuencia=MejorValor(Tp,N,hijosmutados)
 print(menorvalor)
